@@ -138,7 +138,24 @@ console.log(siralisayilar)
 
 // 3f çözümü
 
-/* kodlar buraya */
+tekraredensayilar = [];
+const sayac = {};
+
+for (let sayi of sayilar) {
+  if (sayac[sayi]) {
+    sayac[sayi]++;
+  } else {
+    sayac[sayi] = 1;
+  }
+}
+for (let key in sayac) {
+  if (sayac[key] > 1) {
+    tekraredensayilar.push(`${key} sayısı ${sayac[key]} kere tekrar edilmiştir`);
+  }
+}
+
+console.log(tekraredensayilar);
+
 
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
 
